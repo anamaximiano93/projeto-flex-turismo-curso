@@ -19,6 +19,8 @@ ul li a {
   max-width: 992px;
   margin: auto;
   width: 100%;
+  min-width: 320px;
+  padding: 10px 15px;
 }
 
 header {
@@ -165,16 +167,24 @@ header .menu {
 #plans {
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 50px;
+}
+#plans h2 {
+  font-size: 32px;
 }
 
 .list-plans {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .item-plan {
   flex: 1;
   border: 5px solid #122a57;
+  /*  margin-right: 20px; */
+  padding: 10px;
+  max-width: 240px;
 }
 
 .item-plan .btn {
@@ -187,6 +197,7 @@ header .menu {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 20px;
 }
 
 .item-plan h3::after {
@@ -202,4 +213,72 @@ header .menu {
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
+}
+.item-plan ul li {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.item-plan ul li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #122a57;
+  margin-right: 5px;
+}
+
+footer {
+  background-color: #122a57;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+footer .foot {
+  justify-content: space-between;
+  color: #fff;
+}
+
+/* Mobile */
+
+@media (max-width: 992px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .content {
+    flex-direction: column-reverse;
+  }
+  .content .content_text {
+    width: 100%;
+  }
+  #quem-somos {
+    flex-direction: column-reverse;
+  }
+  #quem-somos img {
+    min-width: 320px;
+    margin: auto;
+  }
+
+  .list-services {
+    flex-direction: column;
+  }
+
+  .item-service img {
+    width: 50%;
+    margin: auto;
+  }
+
+  .list-plans {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .list-plans .item-plan {
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%;
+  }
 }
