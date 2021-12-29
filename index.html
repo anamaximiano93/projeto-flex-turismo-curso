@@ -14,13 +14,25 @@
   </head>
   <body>
     <header>
-      <div class="flex-container menu">
-        <h1>FlexTurismos</h1>
-        <ul class="list-items">
-          <li><a href="#quem-somos">Quem Somos</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#planos">Planos</a></li>
-        </ul>
+      <div class="flex-menu menu">
+        <a href="#">
+          <h1>FlexTurismos</h1>
+        </a>
+        <nav id="nav">
+          <button
+            id="btn-mobile"
+            aria-controls="list-items"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span id="sanduba"></span>
+          </button>
+          <ul class="list-items">
+            <li><a href="#quem-somos">Quem Somos</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#planos">Planos</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
@@ -135,5 +147,6 @@
         <p>Desenvolvido por ♥ Ana Maximiano</p>
       </div>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>
